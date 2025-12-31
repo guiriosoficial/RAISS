@@ -9,7 +9,7 @@ bool conectado = false;
 bool erro = false;
 int momento = 0;
 Servo base, avanco, mergulho, garra;
-// Define as variaveis dos valores das posições de cada Eixo, sendo Delay a velocidade do movimento.
+// Define as variáveis dos valores das posições de cada Eixo, sendo Delay a velocidade do movimento.
 float baseP, avancoP,mergulhoP, garraP, Delay;
 
 void pisca(int led, const int timeout);
@@ -49,13 +49,13 @@ void setup() {
 void loop() {
   String resp = "";
   if(erro){
-  Serial.println("Erro na Conexao com o servidor.");
+  Serial.println("Erro na Conexão com o servidor.");
   digitalWrite(L_GREEN, LOW);
   digitalWrite(L_RED, HIGH);
   while(true);
   }
   if(!conectado){
-    Serial.println("Fim da Conexao.");
+    Serial.println("Fim da Conexão.");
     digitalWrite(L_GREEN, LOW);
     digitalWrite(L_RED, HIGH);
     while(true);
@@ -120,7 +120,7 @@ void loop() {
   // Definição do void de movimentação dos servos
   void moveServo(Servo *servo, int posicao) {
     int p=servo->read();
-    //  Serial.print("Posicao: ");
+    //  Serial.print("Posição: ");
     //  Serial.println(p);
       if(p < posicao) {
       for(int i=p;i<=posicao;i++) {
@@ -273,7 +273,7 @@ String sendData(String command, const int timeout, boolean debug) {
   while ( (time + timeout) > millis()) {
     while (Serial2.available()){
       // O esp possui dados para exibir sua saída na janela serial
-      char c = Serial2.read(); // Le o proximo caracter.
+      char c = Serial2.read(); // Le o proximo carácter.
       response += c;
     }
   }
@@ -290,8 +290,8 @@ void conectaRoteador(String ssid, String senha) {
   delay(5000);
   sendData("AT+CWMODE=1\r\n", 1000, DEBUG); // Modo WiFi
   sendData("AT+CIFSR\r\n", 1000, DEBUG); // Mostra IP do modulo
-  sendData("AT+CIPMUX=0\r\n", 1000, DEBUG); // Configura para somente uma conexao
-  sendData("AT+CIPMODE=0\r\n", 1000, DEBUG); // Configura para transmissao para o modo normal
+  sendData("AT+CIPMUX=0\r\n", 1000, DEBUG); // Configura para somente uma conexão
+  sendData("AT+CIPMODE=0\r\n", 1000, DEBUG); // Configura para transmissão para o modo normal
 }
 
 boolean iniciaConexaoTCP(String ip, String porta,boolean debug) {
@@ -374,6 +374,6 @@ void Desconecta(boolean *conn) {
 }
     /*----------------------------------------------------------------------*/
    /*----------------------------------------------------------------------*/
-  /*----------------------------------fim---------------------------------*/
+  /*----------------------------------FIM---------------------------------*/
  /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/

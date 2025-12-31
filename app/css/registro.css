@@ -1,6 +1,6 @@
 body {
   font-family: "Arial, Helvetica", sans-serif;
-  margin: 0px;
+  margin: 0;
   color: #fff;
 }
 
@@ -51,13 +51,12 @@ body {
 
 .title {
   text-align: center;
-  margin: 0;
   letter-spacing: 4px;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
 }
 
 table {
-  margin: 0px auto 0px auto;
+  margin: 0 auto 0 auto;
 }
 
 .form label {

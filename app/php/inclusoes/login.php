@@ -30,7 +30,7 @@ if ($tentativas < 5 && $ativo == 1) {
         $_SESSION['senha'] = $senha;
         mysqli_real_query($link, "UPDATE $tabela  SET tentativas = 0 WHERE login = '$login' AND senha = '$senhaSH'");
         mysqli_close($link);
-        header("location:/php/site.php");
+        header("location:/php/controle.php");
       } else {
         mysqli_real_query($link, "UPDATE $tabela SET tentativas = tentativas + 1 WHERE login = '$login'");
         mysqli_close($link);

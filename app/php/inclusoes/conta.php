@@ -6,7 +6,7 @@ $link = conecta_mysql($servidor, $usuario, $senhadb, $db);
 $nivel = procura_mysql($link, 'nivel', $tabela, $logado);
 if ($nivel !== 2) {
   mysqli_close($link);
-  echo "Erro usuario não tem permissão para acessar página\n";
+  echo "Erro usuário não tem permissão para acessar página\n";
   echo "<meta http-equiv='refresh' content='5;URL=\"/php/site.php\"'/>\n";
   exit(0);
 }
@@ -56,7 +56,7 @@ if ($_POST['login_a'] != NULL) {
         $login_aerr = "Erro: Caracter Inválido.\n";
       }
       if (in_db($link, $login_a)) {
-        $login_aerr = "Erro: Nome de usuario '$login_a' já existe.\n";
+        $login_aerr = "Erro: Nome de usuário '$login_a' já existe.\n";
       }
     } else {
       $login_aerr = "Erro: Campo login não pode estar vazio.\n";
@@ -71,7 +71,7 @@ if ($_POST['login_a'] != NULL) {
       $comando = "INSERT INTO usuarios ( login , senha , cadastro ) VALUES ( '$login_a' , '$senhaSH' , NOW() )";
       if (!mysqli_real_query($link, $comando)) {
         if ($link->errno == "1062") {
-          $login_aerr = "Erro: Nome de usuario '$login_a' já existe.\n";
+          $login_aerr = "Erro: Nome de usuário '$login_a' já existe.\n";
         }
       }
     }

@@ -1,16 +1,23 @@
 CREATE DATABASE raiss;
+
+USE raiss;
+
 CREATE TABLE usuarios (
-  ID int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  Login varchar(30) NOT NULL,
-  Senha varchar(80) NOT NULL,
-  Nivel int(1) UNSIGNED NOT NULL DEFAULT '1',
-  Ativo bool NOT NULL DEFAULT '0',
-  Tentativas int(1) UNSIGNED NOT NULL DEFAULT '0',
-  Cadastro datetime NOT NULL,
-  PRIMARY KEY ( ID ),
-  UNIQUE KEY Login ( Login ))
+    id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+    login VARCHAR(30) NOT NULL,
+    senha VARCHAR(80) NOT NULL,
+    nivel INT(1) UNSIGNED NOT NULL DEFAULT 1,
+    ativo BOOL NOT NULL DEFAULT 0,
+    tentativas INT(1) UNSIGNED NOT NULL DEFAULT 0,
+    cadastro DATETIME NOT NULL,
+    PRIMARY KEY ( id ),
+    UNIQUE KEY login ( login )
+)
 DEFAULT CHARSET=utf8;
-INSERT INTO usuarios (Login, Senha, Nivel, Ativo, Cadastro)
-VALUES ('Administrador', 'Senha', 2, 1, NOW());
-/* ATENÇÃO: troque 'uruario_raiss' pelo nome do seu uruário */
-GRANT ALL PRIVILEGES ON raiss.* TO 'usuario_rais@localhost' IDENTIFIED BY 'projeto' WITH GRANT OPTIONS;
+
+INSERT INTO usuarios (login, senha, nivel, ativo, cadastro)
+VALUES ('admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 2, 1, NOW());
+
+CREATE USER 'raiss'@'localhost' IDENTIFIED BY 'raiss';
+GRANT ALL PRIVILEGES ON raiss.* TO 'raiss'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;

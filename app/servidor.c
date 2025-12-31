@@ -125,7 +125,7 @@ void amarraSocket(int *sockfd, int portno) {
   serv_addr.sin_addr.s_addr = INADDR_ANY;
   serv_addr.sin_port = htons(portno);
   if (bind(*sockfd, (struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0)
-    error("ERRO ao estabelecer ligacao");
+    error("ERRO ao estabelecer ligação");
 }
 
 void *connection(void *sock_void_ptr) {
@@ -145,10 +145,10 @@ void *connection(void *sock_void_ptr) {
   if (newsock->value < 0)error("ERRO ao aceitar");
   n = write(newsock->value,msg,strlen(msg));
   if (n < 0) error("ERRO ao escrever no socket");
-  printf("\nnova conexao %s porta:%hu\n",inet_ntoa(cli_addr.sin_addr),cli_addr.sin_port);
+  printf("\nnova conexão %s porta:%hu\n",inet_ntoa(cli_addr.sin_addr),cli_addr.sin_port);
   novo.valor = newsock->id;
   insereNoFinal(&ativos, novo);
-  printf("usuarios on ");
+  printf("usuários on ");
   imprimeLista(&ativos);
   FD_ZERO(&u_set);
   FD_SET(newsock->value, &u_set);
@@ -228,7 +228,7 @@ int main(int argc, char *argv[]) {
   inicializaCliente(&newsockfd);
   abreSocket(&sockfd);
   amarraSocket(&sockfd, portno);
-  printf("Servidor TCP v11, MAX 2 usuarios.\n");
+  printf("Servidor TCP v11, MAX 2 usuários.\n");
   printf("para enviar uma mensagem digitar 'id' 'mensagem':\n");
   do {
     envia(&newsockfd);

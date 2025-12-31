@@ -21,8 +21,8 @@ $self = $_SERVER["PHP_SELF"];
 
 // Banco de Dados
 $servidor = "localhost";
-$usuario = "usuario_raiss";
-$senhadb = "projeto";
+$usuario = "raiss";
+$senhadb = "raiss";
 $db = "raiss";
 $tabela = "usuarios";
 ?>
