@@ -46,16 +46,18 @@ Run Rocker
 docker run --platform=linux/amd64 -p 8080:80 --name raiss raiss
 ```
 
-Instale o Servidor LAMP e execute-o:
-```
-apt-get install apache2 php7.0 libapache2-mod-php7.0 mysql-server php7.0-mysql
-```
-Execute o Scriptpara gerar o Banco de Dados:
-```
-/script.sql
-```
-_Veja as Páginas 86 a 101 (Figuras 45 a 76) do [Projeto RAISS (TCC 4RV 2016).pdf](https://github.com/riwersxd/RAISS/blob/master/Projeto%20RAISS%20(TCC%204RV%202016).pdf)_
+Voce também pode instalar o LAMP e executar localmente:  
+_Veja as Páginas 85 a 101 (Figuras 45 a 76) do [Projeto RAISS (TCC 4RV 2016).pdf](https://github.com/riwersxd/RAISS/blob/master/Projeto%20RAISS%20(TCC%204RV%202016).pdf)_
 
 ---
+## Credenciais
+Para fins de estudo, o Login e Senha padrão são:
+- **Login**: admin
+- **Senha**: admin
+
+_Veja mais em `script.sql`_
+
+---
+
 **Este projeto foi desenvolvido por:** André Lucas Maegima, Breno Henrique Borges Santos, Bruno dos Santos Mauricio, Guilherme Rios da Cunha(Eu) e Leonardo Ribeiro dos Santos
 

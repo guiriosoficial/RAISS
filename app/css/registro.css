@@ -5,10 +5,21 @@ body {
 }
 
 .container {
-  background-color: #52bad5;
-  width: 680px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  height: 100vh;
+}
+
+.main {
+  flex: 1;
+  width: 720px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 2px;
 }
 
 .header, .footer {
@@ -42,7 +53,7 @@ body {
 
 .section {
   padding: 16px;
-  border-top: 2px solid #fff;
+  background-color: #52bad5;
 }
 
 .section:last-of-type {
@@ -117,4 +128,10 @@ table {
 
 .edit-row input[type=radio] {
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    max-width: 100%;;
+  }
 }

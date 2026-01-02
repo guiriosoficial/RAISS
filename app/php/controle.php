@@ -16,7 +16,7 @@
       <h3 class="logo">INTERFACE DE CONTROLE</h3>
       <nav class="navbar">
         <?php echo "Logado como $logado"; ?>
-        <a href="registros.php">GERENCIAR USUÁRIOS</a>
+        <a href="registros.html">GERENCIAR USUÁRIOS</a>
         &bull;
         <a href="inclusoes/logoff.php">SAIR</a>
       </nav>
@@ -81,7 +81,7 @@
       <span>&copy;2016 - RAISS</span>
       <nav class="navbar">
         <?php echo "Logado como $logado"; ?>
-        <a href="registros.php">GERENCIAR USUÁRIOS</a>
+        <a href="registros.html">GERENCIAR USUÁRIOS</a>
         &bull;
         <a href="inclusoes/logoff.php">SAIR</a>
       </nav>
