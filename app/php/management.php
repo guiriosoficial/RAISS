@@ -1,8 +1,8 @@
-<?php include 'inclusoes/conta.php'; ?>
+<?php include 'includes/user_management.php'; ?>
 
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,12 +17,12 @@
         <h3 class="logo">CONTROLE DE USUÁRIOS</h3>
         <nav class="navbar">
           <span>
-            <?php echo "Logado com $logado"; ?>
+            <?php echo "Logado com $loggedUsername"; ?>
           </span>
           <br>
-          <a href="controle.php">VOLTAR</a>
+          <a href="control.php">VOLTAR</a>
           &bull;
-          <a href="inclusoes/logoff.php">SAIR</a>
+          <a href="includes/auth_logout.php">SAIR</a>
         </nav>
       </header>
 
@@ -41,11 +41,11 @@
             </div>
             <div class="add-row">
               <label for="password">Senha:</label>
-              <input id="password" type="password" name="senha"><?php echo $senha_err; ?>
+              <input id="password" type="password" name="password"><?php echo $senha_err; ?>
             </div>
             <div class="add-row">
-              <label for="pass-confirm">Confirmação:</label>
-              <input id="pass-confirm" type="password" name="confirm"><?php echo $confirm_err; ?>
+              <label for="password-confirmation">Confirmação:</label>
+              <input id="password-confirmation" type="password" name="password-confirmation"><?php echo $confirm_err; ?>
             </div>
             <button type="submit">Adicionar</button>
           </form>
@@ -75,7 +75,7 @@
             </span>
               <span>
               <input id="adm" type="radio" name="nivel" value="2">
-              <label for="adm">Admnistrador</label>
+              <label for="adm">Administrador</label>
             </span>
             </div>
             <div class="edit-row">
@@ -98,12 +98,12 @@
         <span>&copy;2016 - RAISS</span>
         <nav class="navbar">
           <span>
-            <?php echo "Logado como $logado"; ?>
+            <?php echo "Logado como $loggedUsername"; ?>
           </span>
           <br>
-          <a href="controle.php">VOLTAR</a>
+          <a href="control.php">VOLTAR</a>
           &bull;
-          <a href="inclusoes/logoff.php">SAIR</a>
+          <a href="includes/auth_logout.php">SAIR</a>
         </nav>
       </footer>
     </div>

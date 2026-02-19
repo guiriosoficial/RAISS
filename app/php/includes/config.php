@@ -1,9 +1,9 @@
 <?php
 function test_input($input)
 {
-  $input = trim($input);
-  $input = htmlspecialchars($input);
-  return $input;
+    $input = trim($input);
+    $input = htmlspecialchars($input);
+    return $input;
 }
 
 // POSTs
@@ -25,4 +25,3 @@ $usuario = "raiss";
 $senhadb = "raiss";
 $db = "raiss";
 $tabela = "usuarios";
-?>

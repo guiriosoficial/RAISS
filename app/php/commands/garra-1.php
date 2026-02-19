@@ -1,4 +1,4 @@
-<?php include "inclusoes/check.php"; ?>
+<?php include "includes/auth_guard.php"; ?>
 <?php
 error_reporting(E_ALL);
 

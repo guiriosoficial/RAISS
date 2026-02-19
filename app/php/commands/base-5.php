@@ -1,4 +1,4 @@
-<?php include "inclusoes/check.php"; ?>
+<?php include "includes/auth_guard.php"; ?>
 <?php
 error_reporting(E_ALL);
 
@@ -21,7 +21,7 @@ if ($result === false) {
   echo "OK.\n";
 }
 
-$in = "A-2\r\n";
+$in = "B-5\r\n";
 
 socket_write($socket, $in, strlen($in));
 

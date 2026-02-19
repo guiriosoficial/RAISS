@@ -1,5 +1,5 @@
 # RAISS
-Trabalho de Conclusao de Curso SENAI - Redes de Computaroes Vespertino 2016.  
+Trabalho de Conclusão de Curso SENAI - Redes de Computadores Vespertino 2016.  
 ![RoboticArm](https://github.com/riwersxd/RAISS/blob/master/app/img/braco.png)
 
 > Você pode obter mais detalhes sobre o projeto lendo o arquivo [Projeto RAISS (TCC 4RV 2016).pdf](https://github.com/riwersxd/RAISS/blob/master/Projeto%20RAISS%20(TCC%204RV%202016).pdf)
@@ -8,12 +8,12 @@ Trabalho de Conclusao de Curso SENAI - Redes de Computaroes Vespertino 2016.
 - Arduino Mega 2560
 - Protoboard 830 Pinos
 - Módulo Wi-Fi ESP8266
-- Braço Robódtico de Acrílico MeArm
+- Braço Robótico de Acrílico MeArm
 - Máquina com Servidor Linux
 
 ## Entendendo a Estrutura
 ### **Arquivos:**
-- Os arquivos `/modulo.ino` e `/servidor.c` são os programas para o arduíno.
+- Os arquivos `/modulo.ino` e `/servidor.c` são os programas para o Arduino.
 - Os arquivos em `/php/comandos/` são arquivos de controle do braço.
 - Os arquivos em `/php/inclusoes/` são arquivos de controle do sistema.
 - Os arquivos em `/img/` e `/css/` são respectivamente as imagens e estilos das páginas
@@ -39,14 +39,14 @@ _Veja a Página Página 85 (Figura 44) do [Projeto RAISS (TCC 4RV 2016).pdf](htt
 ## Configurando o Ambiente e Execução do Projeto
 Build Docker
 ```
-docker build ./app -t raiss --platform=linux/amd64
+docker build --platform=linux/amd64 -t raiss .
 ```
 Run Rocker
 ```
 docker run --platform=linux/amd64 -p 8080:80 --name raiss raiss
 ```
 
-Voce também pode instalar o LAMP e executar localmente:  
+Você também pode instalar o LAMP e executar localmente:  
 _Veja as Páginas 85 a 101 (Figuras 45 a 76) do [Projeto RAISS (TCC 4RV 2016).pdf](https://github.com/riwersxd/RAISS/blob/master/Projeto%20RAISS%20(TCC%204RV%202016).pdf)_
 
 ---

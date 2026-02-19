@@ -2,7 +2,7 @@ FROM mattrayner/lamp:latest-1804
 
 WORKDIR /app
 
-COPY . /app
+COPY app /app
 
 RUN apt-get update && apt-get install -y gcc
 

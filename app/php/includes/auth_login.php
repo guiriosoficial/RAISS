@@ -1,6 +1,6 @@
 <?php
-include 'mysql.php';
-include 'vars.php';
+include 'database.php';
+include 'config.php';
 session_start();
 $link = conecta_mysql($servidor, $usuario, $senhadb, $db);
 $tentativas = procura_mysql($link, 'tentativas', $tabela, $login);
